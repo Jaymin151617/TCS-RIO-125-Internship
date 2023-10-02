@@ -9,6 +9,7 @@ st.header('Ranking Mobile Phones based on User Requests', divider='red')
 st.caption('This app was built as a part of my TCS iON Internship Project. It aims to rank the mobile phones based on the interests of the user.\
            To use the app just adjust the sliders on the sidebar, select the connectivity options you want and click the button below. \
            The app will rank the 10 best phones according to your inputs.')
+st.caption(f'Connect with me on LinkedIn [here]({linkedin}).')
 
 st.sidebar.header('Adjust Feature Importance Scores', divider='red')
 st.sidebar.caption('Adjust the scores according to your liking. Some things to remember are:')
@@ -208,5 +209,3 @@ if st.button("Calculate Rankings", type='primary'):
     if calc_df is not None:
         rank_df = get_ranks(calc_df)
         st.dataframe(rank_df.head(10))
-
-st.footer(f'Connect with me on LinkedIn [here]({linkedin})')
