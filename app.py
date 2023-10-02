@@ -7,8 +7,8 @@ import numpy as np
 linkedin = "https://www.linkedin.com/in/jaymin-mistry-765902212"
 st.header('Ranking Mobile Phones based on User Requests', divider='red')
 st.caption('This app was built as a part of my TCS iON Internship Project. It aims to rank the mobile phones based on the interests of the user.\
-           To use the app just adjust the sliders on the sidebar, select the connectivity options you want and click the button below. \
-           The app will rank the 10 best phones according to your inputs.')
+           To use the app just adjust the sliders on the sidebar (which can be accessed by clicking on > symbol on the top left of the screen), \
+           select the connectivity options you want and click the button below. The app will rank the 10 best phones according to your inputs.')
 st.caption(f'Connect with me on LinkedIn [here]({linkedin}).')
 
 st.sidebar.header('Adjust Feature Importance Scores', divider='red')
@@ -187,8 +187,11 @@ def calc_scores(weights):
         temp = final_df.iloc[normalized_df.index,:].copy()
         temp['Performance Score'] = worst_df['score'] / (best_df['score'] + worst_df['score'])
         return temp
-    except:
-        st.error("Please adjust your weights to avoid zero weights for all features.")
+    except ZeroDivisionError:
+        st.error('Oops, it appears that all importance scores are set to 0. Please review and adjust your settings for importance scores.')
+        return None
+    except ValueError:
+        st.error('Sorry, but there are no mobile devices that can use 4G without also supporting 3G simultaneously. Kindly revise your settings.')
         return None
 
 # Function to rank the final dataset
