@@ -9,7 +9,7 @@ st.header('Ranking Mobile Phones based on User Requests', divider='red')
 st.caption('This app was built as a part of my TCS iON Internship Project. It aims to rank the mobile phones based on the interests of the user.\
            To use the app just adjust the sliders on the sidebar, select the connectivity options you want and click the button below. \
            The app will rank the 10 best phones according to your inputs.')
-st.markdown(f'Connect with me on LinkedIn [here]({linkedin}).', unsafe_allow_html=True)
+st.markdown(f"Connect with me on LinkedIn [here]('www.linkedin.com/in/jaymin-mistry-765902212').")
 
 st.sidebar.header('Adjust Feature Importance Scores', divider='red')
 st.sidebar.caption('Adjust the scores according to your liking. Some things to remember are:')
