@@ -4,13 +4,13 @@ This repository contains the code and materials for the TCS RIO 125 Internship t
 
 ## Contents:
 
-### 1. Classifying the Dataset.ipynb
+### 1. [Classifying the Dataset.ipynb](Classifying%20the%20Dataset.ipynb)
 - Description: Includes the code for classifying mobile prices.
 
-### 2. Bifurcating, Merging and Ranking the Dataset.ipynb
+### 2. [Bifurcating, Merging and Ranking the Dataset.ipynb](Bifurcating,%20Merging%20and%20Ranking%20the%20Dataset.ipynb)
 - Description: Contains the code for the development of the TOPSIS ranking algorithm.
 
-### 3. app.py
+### 3. [app.py](app.py)
 - Description: Houses the code for the Python application that ranks mobiles based on user requests.
 
 ### Try the App Online:
